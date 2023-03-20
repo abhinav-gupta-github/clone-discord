@@ -1,0 +1,98 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.background-image{
+    background-image: url('../images/discord-background-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-div{
+    
+}
+.welcome-back{
+    color: white;
+    font-weight: 700;
+    font-size: 24px;
+}
+.excited{
+    color: #b5bac1;
+    font-size: 16px;
+}
+.container{
+    background-color: #313338;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+    padding: 20px;
+}
+label{
+    color: #b5bac1;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0px 0px 8px 0px;
+}
+.input-field-div{
+padding-top: 8px;
+}
+input{
+    padding: 13px;
+    border-radius: 6px;
+    outline:none;
+}
+.forget-password{
+    color: #00A8FC;
+    font-size: 14px;
+    margin: 2px;
+}
+.btn-login{
+    background-color: #5865F2;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.need-account{
+    color: #949BA4;
+    font-size: 14px;
+}
+.qr-code{
+    color: #f2f3f5;
+    font-size: 24px;
+    font-weight: 600;
+}
+.instruction{
+    color: #b5bac1;
+    margin: 0px;
+}
+.right-div{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.set-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-email{
+    margin-bottom: 6px;
+}
+.hide-hyperlink{
+    border-bottom: 1px solid transparent;
+}
+.hide-hyperlink:hover{
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
