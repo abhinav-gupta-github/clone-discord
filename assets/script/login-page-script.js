@@ -9,7 +9,7 @@ function checkUser(){
    {
     if(userEmailID ==='abhi.mechkiit@gmail.com' && userPassword==='cohort9')
     {
-        window.location.href="./user-landing-page.html";
+        window.location.href="./assets/html-pages/user-landing-page.html";
     }  
     else{
         document.getElementById("email-label").style.color="#BD6367";
