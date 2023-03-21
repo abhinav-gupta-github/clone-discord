@@ -96,3 +96,7 @@ input{
     border-bottom: 1px solid;
     cursor: pointer;
 }
+#invalid-user-email, #invalid-user-pwd{
+    color: #BD6367;
+    display: none;
+}

@@ -17,8 +17,11 @@
             <h1 class="welcome-back">Welcome back!</h1>
             <p class="excited">We're so excited to see you again!</p>
             <label id="email-label"
-              >EMAIL OR PHONE NUMBER <span style="color: red">*</span></label
-            >
+              >EMAIL OR PHONE NUMBER <span style="color: red">*</span>
+              <span id="invalid-user-email"
+                ><i>- Login or password is invalid.</i></span
+              >
+            </label>
             <div class="input-field-div">
               <input
                 class="input-email"
@@ -29,8 +32,11 @@
               />
             </div>
             <label id="pwd-label"
-              >PASSWORD <span style="color: red">*</span></label
-            >
+              >PASSWORD <span style="color: red">*</span>
+              <span id="invalid-user-pwd">
+                <i>- Login or password is invalid.</i></span
+              >
+            </label>
             <div class="input-field-div">
               <input type="password" name="password" id="password" size="50" />
             </div>
