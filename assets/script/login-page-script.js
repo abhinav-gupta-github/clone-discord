@@ -3,7 +3,7 @@ function checkUser(){
    var userPassword = document.getElementById("password").value;
    if(userEmailID.length === 0 || userPassword.length === 0)
    {
-    window.alert("Please enter mandatory fields");
+    myFunction();
    }
    if(userEmailID.length >0 && userPassword.length>0)
    {
@@ -21,3 +21,8 @@ function checkUser(){
     }  
    }
 }
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
