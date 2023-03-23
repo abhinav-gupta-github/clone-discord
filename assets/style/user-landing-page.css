@@ -1,115 +1,159 @@
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.main-grid{
-    display: grid;
-    gap: 5px;
-    grid-template-columns: 4fr 96fr;
-    border: 1px solid silver;
+.main-grid {
+  display: grid;
+  grid-template-columns: 4fr 96fr;
 }
-.split-main-content{
-    display: grid;
-    gap: 5px;
-    grid-template-columns: 15fr 70fr 15fr;
-    border: 1px solid silver;
+.split-main-content {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 10fr 75fr 15fr;
 }
-.grid-logo-item{
-    background-color: black;
-    color: white;
-    height: 100vh;
+.grid-logo-item {
+  background-color: black;
+  color: white;
+  height: 100vh;
 }
-body{
-    background-color: wheat;
+body {
+  background-color: wheat;
 }
-.left-menu-padding{
-    padding: 14px;
+.left-menu-padding {
+  padding: 14px;
 }
-.left-btn-common{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.left-btn-common {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-.logo-span{
-    border:1px solid transparent;
-    border-radius: 49%;
-    background-color: #313338;
+.logo-span {
+  border: 1px solid transparent;
+  border-radius: 49%;
+  background-color: #313338;
 }
-.logo-span:hover{
-    border-radius: 30%;
-    background-color:#5865F2;
-    transition: 0.5s;
+.logo-span:hover {
+  border-radius: 30%;
+  background-color: #5865f2;
+  transition: 0.5s;
 }
-.C9-VSS{    
-    border:1px solid transparent;
-    font-size: 12px;
-    background-color: #5865F2;
-    border-radius: 30%;
-    font-weight: 500;
-    cursor: pointer;
+.C9-VSS {
+  border: 1px solid transparent;
+  font-size: 12px;
+  background-color: #5865f2;
+  border-radius: 30%;
+  font-weight: 500;
+  cursor: pointer;
 }
-.add-server-btn{
-    fill: #23A559;
-    font-weight: 500;
-    border-radius: 50%;
-    background-color: #313338;
+.add-server-btn {
+  fill: #23a559;
+  font-weight: 500;
+  border-radius: 50%;
+  background-color: #313338;
 }
-.add-server-btn:hover{
-    fill: white;
-    background-color: #23A559;
-    border-radius: 30%;
-    transition: 0.5s;
+.add-server-btn:hover {
+  fill: white;
+  background-color: #23a559;
+  border-radius: 30%;
+  transition: 0.5s;
 }
-.public-server-btn{
-    fill: #23A559;
-    background-color: #313338;
-    border-radius: 50%;
+.public-server-btn {
+  fill: #23a559;
+  background-color: #313338;
+  border-radius: 50%;
 }
-.public-server-btn:hover{
-    fill: white;
-    background-color: #23A559;
-    border-radius: 30%;
-    transition: 0.5s;
+.public-server-btn:hover {
+  fill: white;
+  background-color: #23a559;
+  border-radius: 30%;
+  transition: 0.5s;
 }
-.download-apps{
-    fill: #23A559;
-    background-color: #313338;
-    border-radius: 50%;
+.download-apps {
+  fill: #23a559;
+  background-color: #313338;
+  border-radius: 50%;
 }
-.download-apps:hover{
-    fill: white;
-    background-color: #23A559;
-    border-radius: 30%;
-    transition: 0.5s;
+.download-apps:hover {
+  fill: white;
+  background-color: #23a559;
+  border-radius: 30%;
+  transition: 0.5s;
 }
-.left-channel-list{
-    background-color: #313338;
-    color: #f2f3f5;
-    font-weight: 600;
-    font-size: 16px;
-    text-overflow: ellipsis;
-    padding: 12px 0px 12px 16px;
-    white-space: nowrap;
-    overflow: hidden;
-    max-width: 60%;
+.left-channel-list {
+  background-color: #313338;
+  color: #f2f3f5;
+  font-weight: 600;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  padding: 12px 0px 12px 16px;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.left-aside{
-    display: flex;
-    align-items: center;
+.left-aside {
+  display: flex;
+  align-items: center;
 }
-.dropdown-icon{
-    background-color: #313338;
-    color: white;
-    padding:12px 2px 12px 2px;
+.dropdown-icon {
+  background-color: #313338;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 500,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+}
+.text-channel-heading,
+.voice-channel-heading {
+  color: #949ba4;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #2b2d31;
+  padding: 8px 0px 8px 0px;
+}
+li {
+  list-style-type: none;
+  padding: 0px;
+}
+ul {
+  margin: 0px;
+  padding: 0px 10px;
+}
+.channel-text {
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #35373c;
+  color: #f2f0eb;
+  margin: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  
+}
+#text-channel-list, #voice-channel-list {
+  padding-top: 0px;
+  background-color: #35373c;;
+}
+.channel-list {
+  margin-top: 0px;
+}
+/*#2B2D31*/
+.left-aside-menu{
+    background-color:#35373c;;
+    height: 100vh;
+    max-width: 80%;
+}
+.title-prefix{
+   padding-right: 5px;
+    font-size: 20px;
+}
+.search-icon{
+    width: 20px;
 }

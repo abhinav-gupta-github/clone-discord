@@ -7,10 +7,13 @@
     <title>Discord | Cohort 9</title>
     <link rel="icon" type="image/x-icon" href="../images/gab.ico" />
     <link rel="stylesheet" href="../style/user-landing-page.css" />
-    <script src="../script/user-landing-page.js"></script>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,0,0"
     />
   </head>
   <body>
@@ -88,19 +91,81 @@
         </div>
         <div class="grid-main-item">
           <div class="split-main-content">
-            <aside class="left-aside">
-              <div class="left-channel-list">
-                Cohort 9 | Vidhya Skills Schoolllllllll
+            <aside class="left-aside-menu">
+              <div class="left-aside">
+                <div class="left-channel-list">
+                  Cohort 9 | Vidhya Skills Schoolllllllll
+                </div>
+                <span class="dropdown-icon">
+                  <span class="material-symbols-outlined"> expand_more </span>
+                </span>
               </div>
-              <span class="dropdown-icon">
-                <span class="material-symbols-outlined"> expand_more </span>
-              </span>
+              <div class="text-channel-heading">
+                <div style="display: flex; align-items: center">
+                  <svg
+                    class="arrow-2HswgU icon-3zI3d2"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.59 8.59004L12 13.17L7.41 8.59004L6 10L12 16L18 10L16.59 8.59004Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <span>TEXT CHANNELS</span>
+                </div>
+              </div>
+              <div>
+                <ul id="text-channel-list"></ul>
+              </div>
+              <div class="voice-channel-heading">
+                <div style="display: flex; align-items: center">
+                  <svg
+                    class="arrow-2HswgU icon-3zI3d2"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M16.59 8.59004L12 13.17L7.41 8.59004L6 10L12 16L18 10L16.59 8.59004Z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <span>VOICE CHANNELS</span>
+                </div>
+              </div>
+              <div>
+                <ul id="voice-channel-list"></ul>
+              </div>
             </aside>
             <div class="center-chat-div">main chat container</div>
-            <aside class="right-friend-list">right online friends</aside>
+            <aside class="right-aside-menu">
+              <div class="right-aside">
+                <div class="right-friend-list">
+                  <div>
+                    <input type="text" name="search" id="search" size="9" />
+                    <img
+                      src="../images/search-icon.png"
+                      alt="search-icon"
+                      class="search-icon"
+                    />
+                  </div>
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
+<script src="../script/user-landing-page.js"></script>
