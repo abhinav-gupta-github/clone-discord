@@ -1,0 +1,46 @@
+.on-friend-p-css{
+    background-color: #35373c;
+    padding: 10px 6px 10px 6px;
+    color: #949ba4;
+    margin: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.on-friend-p-css:hover{
+    background-color: #404249;
+    color:white;
+}
+.off-friend-p-css{
+    background-color: #35373c;
+    padding: 10px 6px 10px 6px;
+    color: #949ba4;
+    margin: 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.off-friend-p-css:hover{
+    background-color: #4e5055;
+    color: white;
+}
+.online-count-span-element, .offline-count-span-element{
+    background-color: #35373c;
+    color: white;
+    padding: 24px 8px 2px 5px; 
+    font-size: 12px;
+    font-weight:400; 
+}
+.offline-count-span-element{
+    border-top: 1px solid black;
+}
+.account-image{
+    width: 40px;
+    border-radius: 50%;
+}
+.on-name-span-element{
+    padding-left: 10px;
+}
+.off-name-span-element{
+    padding-left: 10px;
+}

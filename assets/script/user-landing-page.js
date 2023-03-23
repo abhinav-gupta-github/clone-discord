@@ -5,6 +5,7 @@ const textChannelJsonRes = [
     prefix: "#",
     category: "channel-name",
     url: "",
+    addInvite: "../images/add-person.png",
   },
   {
     id: 2,
@@ -12,6 +13,7 @@ const textChannelJsonRes = [
     prefix: "#",
     category: "channel-name",
     url: "",
+    addInvite: "../images/add-person.png",
   },
   {
     id: 3,
@@ -19,6 +21,7 @@ const textChannelJsonRes = [
     prefix: "#",
     category: "channel-name",
     url: "",
+    addInvite: "../images/add-person.png",
   },
   {
     id: 4,
@@ -26,6 +29,7 @@ const textChannelJsonRes = [
     prefix: "#",
     category: "channel-name",
     url: "",
+    addInvite: "../images/add-person.png",
   },
   {
     id: 5,
@@ -33,6 +37,7 @@ const textChannelJsonRes = [
     prefix: "#",
     category: "channel-name",
     url: "",
+    addInvite: "../images/add-person.png",
   },
   {
     id: 6,
@@ -40,6 +45,7 @@ const textChannelJsonRes = [
     prefix: "#",
     category: "channel-name",
     url: "",
+    addInvite: "../images/add-person.png",
   },
   {
     id: 7,
@@ -47,6 +53,7 @@ const textChannelJsonRes = [
     prefix: "#",
     category: "channel-name",
     url: "",
+    addInvite: "../images/add-person.png",
   },
 ];
 //Text-channel-div
@@ -59,14 +66,22 @@ for (let i = 0; i < textChannelJsonRes.length; i++) {
   prefix.className = "title-prefix";
   prefix.textContent = textChannelJsonRes[i].prefix;
 
+  const extraSpan = document.createElement("span");
+  extraSpan.className = "extra-span";
+
+  const addInviteIcon = document.createElement("img");
+  addInviteIcon.className = "add-invite-icon";
+  addInviteIcon.src = textChannelJsonRes[i].addInvite;
 
   const textItem = document.createElement("p");
   textItem.className = "channel-text";
   textItem.textContent = textChannelJsonRes[i].title;
 
   textItem.prepend(prefix);
+  textItem.appendChild(addInviteIcon);
   listItems.appendChild(textItem);
   channelListContainerUL.appendChild(listItems);
+
 }
 
 const voiceChannelJsonRes = [
@@ -79,7 +94,7 @@ const voiceChannelJsonRes = [
   },
   {
     id: 2,
-    title: "logical-questions",
+    title: "Interview-prep",
     prefix: "#",
     category: "channel-name",
     url: "",

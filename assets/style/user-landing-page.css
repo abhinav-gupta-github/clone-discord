@@ -10,18 +10,24 @@ body {
 .split-main-content {
   display: grid;
   gap: 5px;
-  grid-template-columns: 10fr 75fr 15fr;
+  grid-template-columns: 10fr 75fr 20fr;
 }
 .grid-logo-item {
-  background-color: black;
+  background-color: #1e1f22;
   color: white;
   height: 100vh;
 }
 body {
-  background-color: wheat;
+  background-color: black;
 }
 .left-menu-padding {
   padding: 14px;
+  border-left: 3px solid transparent;
+}
+.left-menu-padding:hover {
+  border-left: 3px solid silver;
+  border-radius: 50%;
+  transition: 0.15s;
 }
 .left-btn-common {
   width: 45px;
@@ -59,7 +65,7 @@ body {
   fill: white;
   background-color: #23a559;
   border-radius: 30%;
-  transition: 0.5s;
+  transition: 0.15s;
 }
 .public-server-btn {
   fill: #23a559;
@@ -70,7 +76,7 @@ body {
   fill: white;
   background-color: #23a559;
   border-radius: 30%;
-  transition: 0.5s;
+  transition: 0.15s;
 }
 .download-apps {
   fill: #23a559;
@@ -81,7 +87,7 @@ body {
   fill: white;
   background-color: #23a559;
   border-radius: 30%;
-  transition: 0.5s;
+  transition: 0.15s;
 }
 .left-channel-list {
   background-color: #313338;
@@ -126,34 +132,132 @@ ul {
   padding: 0px 10px;
 }
 .channel-text {
-  padding: 7px;
+  padding: 2px 7px 2px 7px;
   border-radius: 5px;
   background-color: #35373c;
   color: #f2f0eb;
   margin: 3px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   align-items: center;
-  
+  cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-#text-channel-list, #voice-channel-list {
+.channel-text:hover {
+  background-color: #404249;
+}
+#text-channel-list,
+#voice-channel-list {
   padding-top: 0px;
-  background-color: #35373c;;
+  background-color: #35373c;
 }
 .channel-list {
   margin-top: 0px;
 }
 /*#2B2D31*/
-.left-aside-menu{
-    background-color:#35373c;;
-    height: 100vh;
-    max-width: 80%;
+.left-aside-menu {
+  background-color: #35373c;
+  height: 100vh;
+  max-width: 80%;
 }
-.title-prefix{
-   padding-right: 5px;
-    font-size: 20px;
+.title-prefix {
+  padding-right: 5px;
+  font-size: 20px;
 }
-.search-icon{
-    width: 20px;
+.add-invite-icon {
+  width: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: none;
+}
+.add-invite-icon:hover {
+  display: block;
+  background-color: green;
+}
+.bottom-logo-span {
+  padding: 10px 6px 5px 6px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: green;
+}
+.bottom-name {
+  font-size: 13px;
+  color: #f2f3f5;
+  font-weight: 500;
+}
+.bottom-id {
+  font-size: 12px;
+  color: #b7bbc0;
+  font-weight: 100;
+}
+.bottom-logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1e1f22;
+  padding: 7px 1px 7px 1px;
+  bottom: 1px;
+  position: fixed;
+  width: 14.5%;
+}
+.svg-border-set{
+  fill: rgb(199, 197, 197);
+  padding: 2px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+.svg-border-set:hover{
+  fill: white;
+  background-color: #404249;
+}
+
+/*Right aside css starts*/
+.right-aside-menu {
+  border: 0px solid silver;
+  height: 100vh;
+}
+.right-aside {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #313338;
+  padding: 5px 0px;
+  border-bottom: 1px solid black;
+}
+.search-icon {
+  width: 20px;
+  border: 1px solid silver;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.right-input {
+  border: 0px transparent;
+  padding: 5px 0px;
+  border: 0px transparent;
+  border-radius: 5px;
+}
+input:focus {
+  border: 0px transparent;
+  outline: none;
+}
+.right-margin-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  gap: 10px;
+}
+.icon-2xnN2Y{
+  cursor: pointer;
+  fill: rgb(207, 206, 206);
+}
+.icon-2xnN2Y:hover{
+  fill: white;
+}
+svg{
+  cursor: pointer;
 }
