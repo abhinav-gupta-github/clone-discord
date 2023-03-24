@@ -203,19 +203,20 @@ ul {
   position: fixed;
   width: 14.8%;
 }
-.svg-border-set{
+.svg-border-set {
   fill: rgb(199, 197, 197);
   padding: 2px;
   border: 1px solid transparent;
   border-radius: 5px;
 }
-.svg-border-set:hover{
+.svg-border-set:hover {
   fill: white;
   background-color: #404249;
 }
 
 /*Right aside css starts*/
 .right-aside-menu {
+  overflow-y: auto;
   border: 0px solid silver;
   height: 100vh;
 }
@@ -251,15 +252,28 @@ input:focus {
   margin: 5px;
   gap: 10px;
 }
-.icon-2xnN2Y{
+.icon-2xnN2Y {
   cursor: pointer;
   fill: rgb(207, 206, 206);
 }
-.icon-2xnN2Y:hover{
+.icon-2xnN2Y:hover {
   fill: white;
 }
-svg{
+svg {
   cursor: pointer;
 }
-
-/*center chat div style*/
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
