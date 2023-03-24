@@ -1,0 +1,68 @@
+.chat-container-div{
+    background-color: #313338;
+    padding: 7px 8px 7px 8px;
+    color: #f2f3f5;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hashtag{
+    padding: 0px 0px 0px 5px;
+    font-size: 23px;
+    font-weight: 700;
+}
+.general{
+    padding: 0px 0px 0px 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.chat-header-right-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.hash-general{
+    display: flex;
+    align-items: center;
+}
+.chat-header-svg-icon{
+    fill:rgb(209, 207, 207);
+}
+.chat-header-svg-icon:hover{
+    fill: white;
+    transition: 0.2s;
+}
+.bottom-input-text-area-css{
+    padding: 5px 10px 5px 10px;
+    position: fixed;
+    bottom: 0px;
+    width: 62%;
+    margin-left: 18px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #404249;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+.bottom-right-input-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.input-align-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.input-center-text-area{
+    border: transparent;
+    background-color: #404249;
+}
+input:focus {
+    outline: none;
+    color: white;
+}

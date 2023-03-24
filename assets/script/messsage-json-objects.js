@@ -1,4 +1,4 @@
-const fakeAPIResponse = [
+const fakeTextResponse = [
     {
       id: 1,
       title: "general",

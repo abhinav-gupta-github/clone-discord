@@ -9,8 +9,7 @@ body {
 }
 .split-main-content {
   display: grid;
-  gap: 5px;
-  grid-template-columns: 10fr 75fr 20fr;
+  grid-template-columns: 236px 10fr 2.2fr;
 }
 .grid-logo-item {
   background-color: #1e1f22;
@@ -102,6 +101,7 @@ body {
 .left-aside {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 .dropdown-icon {
   background-color: #313338;
@@ -111,6 +111,7 @@ body {
 }
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24;
+  padding: 10px;
 }
 .text-channel-heading,
 .voice-channel-heading {
@@ -138,7 +139,7 @@ ul {
   color: #f2f0eb;
   margin: 3px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -161,7 +162,6 @@ ul {
 .left-aside-menu {
   background-color: #35373c;
   height: 100vh;
-  max-width: 80%;
 }
 .title-prefix {
   padding-right: 5px;
@@ -261,3 +261,5 @@ input:focus {
 svg{
   cursor: pointer;
 }
+
+/*center chat div style*/
