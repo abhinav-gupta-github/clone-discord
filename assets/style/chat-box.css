@@ -115,9 +115,9 @@ input:focus {
 .p-in-div-chat {
   margin: 0px;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 500;
   padding-bottom: 15px;
-  color: #e1dbdb;
+  color: #aba2a2;
 }
 #chat-center-render {
   background-color: #363535;

@@ -228,6 +228,9 @@ for (let i = 0; i < offlineFriendsJSON.length; i++) {
 }
 function onPageLoad() {
   //Render text message chat container with image and date
+  $("#emoji-opener").emojioneArea({
+    pickerPosition: "top"
+  });
   const textMsgContainer = document.getElementById("chat-center-render");
 
   for (let i = 0; i < friendListJSON.length; i++) {
