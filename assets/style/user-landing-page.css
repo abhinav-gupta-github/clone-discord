@@ -248,13 +248,15 @@ ul {
 }
 .right-input {
   border: 0px transparent;
-  padding: 5px 0px;
+  padding: 5px 10px;
   border: 0px transparent;
   border-radius: 5px;
+  color: black;
 }
 input:focus {
   border: 0px transparent;
   outline: none;
+  color: black;
 }
 .right-margin-area {
   display: flex;

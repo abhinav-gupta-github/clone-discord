@@ -122,8 +122,52 @@ const friendListJSON = [
     description: "Hi team, how is everyone doing ? ",
     category: "Yesterday at 12:41 PM",
   },
+  {
+    id: 4,
+    name: "Bangladesh Rai",
+    status: 1,
+    imageSrc: "../images/3cartoon.png",
+    description:
+      " Hard coded tradoff ahead !! Depending on the surrounding code and the screen resolution reduced.",
+    category: "Yesterday at 4:05 PM",
+  },
+  {
+    id: 5,
+    name: "Champak Lal",
+    status: 0,
+    imageSrc: "../images/4cartoon.jpg",
+    description:
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday Your perfect pack for everyday use and walks in the forest. Result if the container is wide enough and the text would not overflow the container.",
+    category: "Today at 09:12 AM",
+  },
+  {
+    id: 6,
+    name: "Pradeep Dalai",
+    status: 0,
+    imageSrc: "../images/5cartoon.jpg",
+    description:
+      "Result if the container is wide enough and the text would not overflow the container.",
+    category: "Today at 10:12 AM",
+  },
+  {
+    id: 7,
+    name: "Preeti Sharma",
+    status: 1,
+    imageSrc: "../images/6cartoon.jpg",
+    description:
+      "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+    category: "Today at 10:12 AM",
+  },
+  {
+    id: 6,
+    name: "Tarun Sharma",
+    status: 0,
+    imageSrc: "../images/3cartoon.png",
+    description:
+      "Your perfect pack for everyday use and walks in the forest. :-) Stash your laptop (up to 15 inches) in the padded sleeve, your everyday. The reputation requirement helps protect this question from spam and non-answer activity. Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday.",
+    category: "Today at 10:12 AM",
+  },
 ];
-
 let onlineFriendsJSON = friendListJSON.filter((a) => a.status === 1);
 let offlineFriendsJSON = friendListJSON.filter((b) => b.status === 0);
 
@@ -182,60 +226,112 @@ for (let i = 0; i < offlineFriendsJSON.length; i++) {
   spanOfflineFriends.prepend(image);
   offlineFriendContainer.appendChild(spanOfflineFriends);
 }
+function onPageLoad() {
+  //Render text message chat container with image and date
+  const textMsgContainer = document.getElementById("chat-center-render");
 
-//Render text message chat container with image and date
-const textMsgContainer = document.getElementById("chat-center-render");
+  for (let i = 0; i < friendListJSON.length; i++) {
+    //1. image inside span - start
+    const spanImage = document.createElement("span");
+    spanImage.className = "span-image-css";
 
-for (let i = 0; i < friendListJSON.length; i++) {
-  //1. image inside span - start
-  const spanImage = document.createElement("span");
-  spanImage.className = "span-image-css";
+    const imageURLContainer = document.createElement("img");
+    imageURLContainer.className = "chat-image-css";
+    imageURLContainer.src = friendListJSON[i].imageSrc;
 
-  const imageURLContainer = document.createElement("img");
-  imageURLContainer.className = "chat-image-css";
-  imageURLContainer.src = friendListJSON[i].imageSrc;
+    spanImage.appendChild(imageURLContainer);
+    //end - main id insert remaining
 
-  spanImage.appendChild(imageURLContainer);
-  //end - main id insert remaining
+    //2. text-messsage 1st div and two span inside - starts
+    const divChatContainer1 = document.createElement("div");
+    divChatContainer1.className = "div1-chat-cont-css";
 
-  //2. text-messsage 1st div and two span inside - starts
-  const divChatContainer1 = document.createElement("div");
-  divChatContainer1.className = "div1-chat-cont-css";
+    const span1InDiv1 = document.createElement("span");
+    span1InDiv1.className = "span1-div1";
+    span1InDiv1.textContent = friendListJSON[i].name;
 
-  const span1InDiv1 = document.createElement("span");
-  span1InDiv1.className = "span1-div1";
-  span1InDiv1.textContent = friendListJSON[i].name;
+    const span2InDiv1 = document.createElement("span");
+    span2InDiv1.className = "span2-div1";
+    span2InDiv1.textContent = friendListJSON[i].category;
+    divChatContainer1.appendChild(span1InDiv1);
+    divChatContainer1.appendChild(span2InDiv1);
+    //end - main div then id insert remaining
 
-  const span2InDiv1 = document.createElement("span");
-  span2InDiv1.className = "span2-div1";
-  span2InDiv1.textContent = friendListJSON[i].category;
-  divChatContainer1.appendChild(span1InDiv1);
-  divChatContainer1.appendChild(span2InDiv1);
-  //end - main div then id insert remaining
+    //3. 2nd div for description - start
+    const divChatContainer2 = document.createElement("div");
+    divChatContainer2.className = "div2-chat-right-css";
 
-  //3. 2nd div for description - start
-  const divChatContainer2 = document.createElement("div");
-  divChatContainer2.className = "div2-chat-right-css";
+    const pInDivCont = document.createElement("p");
+    pInDivCont.className = "p-in-div-chat";
+    pInDivCont.textContent = friendListJSON[i].description;
+    divChatContainer2.appendChild(pInDivCont);
+    //end - main div insert remaining
 
-  const pInDivCont = document.createElement("p");
-  pInDivCont.className = "p-in-div-chat";
-  pInDivCont.textContent = friendListJSON[i].description;
-  divChatContainer2.appendChild(pInDivCont);
-  //end - main div insert remaining
+    //4. Create a div and merge step 2 and 3
+    const subMainDivCont = document.createElement("div");
+    subMainDivCont.className = "sub-main-div";
+    subMainDivCont.appendChild(divChatContainer1);
+    subMainDivCont.appendChild(divChatContainer2);
 
-  //4. Create a div and merge step 2 and 3
-  const subMainDivCont = document.createElement("div");
-  subMainDivCont.className = "sub-main-div";
-  subMainDivCont.appendChild(divChatContainer1);
-  subMainDivCont.appendChild(divChatContainer2);
+    //5. Create div and add step 1 and 4
+    const mainDivCont = document.createElement("div");
+    mainDivCont.className = "main-div-container";
+    mainDivCont.appendChild(spanImage);
+    mainDivCont.appendChild(subMainDivCont);
 
-  //5. Create div and add step 1 and 4
-  const mainDivCont = document.createElement("div");
-  mainDivCont.className = "main-div-container";
-  mainDivCont.appendChild(spanImage);
-  mainDivCont.appendChild(subMainDivCont);
-
-  //6. Put step 5 in a div id
-  textMsgContainer.appendChild(mainDivCont);
-  //end
+    //6. Put step 5 in a div id
+    textMsgContainer.appendChild(mainDivCont);
+    //end
+  }
 }
+
+//insert new chat in the json file to show
+function insertNewChat() {
+  let newChattingText = document.getElementById("text-message").value;
+  if (newChattingText.length <= 0) {
+    return 0;
+  } else {
+    let getDateTime = new Date();
+
+    var objJSON = friendListJSON;
+    obj = {
+      name: "Abhinav Gupta",
+      status: 2,
+      imageSrc: "../images/7cartoon.png",
+      description: newChattingText,
+      category:
+        "Today at " +
+        getDateTime.getHours()%12 +
+        ":" +
+        getDateTime.getMinutes() +
+        getDateTime
+          .toLocaleString("en-US", { hour: "numeric", hour12: true })
+          .substring(2, 5),
+    };
+    objJSON.push(obj);
+    document.getElementById("text-message").value = "";
+    return 1;
+  }
+}
+
+//scroll to the bottom of the chat to get the latest chat
+function scrollToEnd() {
+  let setScrollToLast = document.getElementById("chat-center-render");
+  setScrollToLast.scrollTop = setScrollToLast.scrollHeight;
+}
+
+let enterButton = document.getElementById("text-message");
+enterButton.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
+    //checks whether the pressed key is "Enter"
+    setNewChatItem();
+  }
+});
+
+function setNewChatItem() {
+  insertNewChat();
+  onPageLoad();
+  scrollToEnd();
+}
+onPageLoad();
+scrollToEnd();
