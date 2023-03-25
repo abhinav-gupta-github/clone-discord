@@ -116,7 +116,7 @@ body {
   margin: 0px;
   padding: 2px;
 }
-.material-symbols-outlined:hover{
+.material-symbols-outlined:hover {
   background-color: #404249;
   border-radius: 50%;
   margin: 0px;
@@ -238,6 +238,8 @@ ul {
   background-color: #313338;
   padding: 5px 0px;
   border-bottom: 1px solid black;
+  position: sticky;
+  top: 0px;
 }
 .search-icon {
   width: 20px;
@@ -289,4 +291,31 @@ svg {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: grey;
+}
+.search-container {
+  width: 100px;
+  height: 1px;
+  border-radius: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 17px 18px;
+  gap: 5px;
+  cursor: pointer;
+}
+#search-right-aside-option {
+  display: none;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  background-color: transparent;
+}
+i.fa-times {
+  display: none;
+  margin-left: auto;
+  cursor: pointer;
+}
+.search-container.active > :is(i, #search-right-aside-option) {
+  display: block;
 }

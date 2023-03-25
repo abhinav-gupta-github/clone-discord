@@ -62,7 +62,7 @@ for (let i = 0; i < textChannelJsonRes.length; i++) {
   const listItems = document.createElement("li");
   listItems.className = "channel-list";
 
-  const prefix = document.createElement("span")
+  const prefix = document.createElement("span");
   prefix.className = "title-prefix";
   prefix.textContent = textChannelJsonRes[i].prefix;
 
@@ -81,7 +81,6 @@ for (let i = 0; i < textChannelJsonRes.length; i++) {
   textItem.appendChild(addInviteIcon);
   listItems.appendChild(textItem);
   channelListContainerUL.appendChild(listItems);
-
 }
 
 const voiceChannelJsonRes = [
@@ -107,7 +106,7 @@ for (let i = 0; i < voiceChannelJsonRes.length; i++) {
   const listItems = document.createElement("li");
   listItems.className = "channel-list";
 
-  const prefix = document.createElement("span")
+  const prefix = document.createElement("span");
   prefix.className = "title-prefix";
   prefix.textContent = voiceChannelJsonRes[i].prefix;
 
@@ -119,3 +118,5 @@ for (let i = 0; i < voiceChannelJsonRes.length; i++) {
   listItems.appendChild(textItem);
   voiceListContainerUL.appendChild(listItems);
 }
+const searchWrapper = document.querySelector(".search-container");
+searchWrapper.classList.add("active");
