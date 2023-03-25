@@ -124,9 +124,13 @@
                 </span>
               </div>
               <div class="text-channel-heading">
-                <div style="display: flex; align-items: center">
+                <div
+                  class="arrow-icon-channel"
+                  style="display: flex; align-items: center"
+                  onclick="hideTextChannel();"
+                >
                   <svg
-                    class="arrow-2HswgU icon-3zI3d2"
+                    class="arrow-icon-channel-1"
                     width="15"
                     height="15"
                     viewBox="0 0 24 24"
@@ -143,13 +147,17 @@
                   <span>TEXT CHANNELS</span>
                 </div>
               </div>
-              <div>
+              <div id="text-channel-list-main">
                 <ul id="text-channel-list"></ul>
               </div>
               <div class="voice-channel-heading">
-                <div style="display: flex; align-items: center">
+                <div
+                  class="arrow-icon-channel"
+                  style="display: flex; align-items: center"
+                  onclick="hideVoiceChannel();"
+                >
                   <svg
-                    class="arrow-2HswgU icon-3zI3d2"
+                    class="arrow-icon-channel-1"
                     width="15"
                     height="15"
                     viewBox="0 0 24 24"
@@ -166,7 +174,7 @@
                   <span>VOICE CHANNELS</span>
                 </div>
               </div>
-              <div>
+              <div id="voice-channel-list-main">
                 <ul id="voice-channel-list"></ul>
               </div>
               <div class="bottom-setting">

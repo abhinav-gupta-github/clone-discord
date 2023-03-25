@@ -120,3 +120,24 @@ for (let i = 0; i < voiceChannelJsonRes.length; i++) {
 }
 const searchWrapper = document.querySelector(".search-container");
 searchWrapper.classList.add("active");
+
+let countClickTxtChan = 0;
+let countClickVoiceChan = 0;
+function hideTextChannel() {
+  countClickTxtChan+=1;
+  if (countClickTxtChan % 2 != 0) {
+    document.getElementById("text-channel-list-main").style.display = "none";
+  } else {
+    document.getElementById("text-channel-list-main").style.display = "block";
+  }
+}
+function hideVoiceChannel(){
+  countClickVoiceChan+=1;
+  if(countClickVoiceChan%2 != 0){
+    document.getElementById("voice-channel-list-main").style.display = "none";
+  }
+  else{    
+  document.getElementById("voice-channel-list-main").style.display = "block";
+  }
+}
+
