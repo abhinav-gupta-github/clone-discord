@@ -319,3 +319,39 @@ i.fa-times {
 .search-container.active > :is(i, #search-right-aside-option) {
   display: block;
 }
+
+.left-menu-padding {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.left-menu-padding .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 0px;
+  position: absolute;
+  z-index: 1;
+  top: 21px;
+  left: 110%;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.left-menu-padding .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.left-menu-padding:hover .tooltiptext {
+  visibility: visible;
+}
