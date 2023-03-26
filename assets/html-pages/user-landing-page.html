@@ -111,8 +111,13 @@
               <span class="tooltiptext">Download Apps</span>
             </span>
           </div>
-          <div class="left-menu-padding logout-btn-css" onclick="logout()">
-            <span class="logout-btn left-btn-common">
+          <div
+            title="Log out"
+            class="left-menu-padding logout-btn-css"
+            id="logout-position"
+            onclick="logout()"
+          >
+            <span class="logout-btn left-btn-common" id="logout-btn">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="20"
@@ -124,7 +129,6 @@
                   fill="white"
                 />
               </svg>
-              <span class="tooltiptext">Click to Logout</span>
             </span>
           </div>
         </div>

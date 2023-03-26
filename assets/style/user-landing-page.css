@@ -419,6 +419,18 @@ i.fa-times {
   visibility: visible;
 }
 .logout-btn {
-  background-color: #c70c0c;
+  background-color: #e13838;
   border-radius: 50%;
+}
+#logout-btn {
+  width: 30px;
+  height: 30px;
+}
+#logout-position {
+  position: fixed;
+  left: 8px;
+  bottom: -4px;
+}
+.logout-btn-css{
+  cursor: pointer;
 }
