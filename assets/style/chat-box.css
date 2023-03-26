@@ -118,6 +118,7 @@ input:focus {
   font-weight: 500;
   padding-bottom: 15px;
   color: #aba2a2;
+  word-break: break-all;
 }
 #chat-center-render {
   background-color: #363535;

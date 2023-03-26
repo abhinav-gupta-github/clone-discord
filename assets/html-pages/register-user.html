@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register User</title>
+    <link rel="icon" type="image/x-icon" href="../images/gab.ico" />
+    <link rel="stylesheet" href="../style/login-page-style.css" />
+    <script src="../script/login-page-script.js"></script>
+    <script src="../script/register-user.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="background-image">
+        <div class="container" style="padding-bottom: 40px;">
+          <div class="left-div">
+            <h1 class="welcome-back">Hello Amigo !</h1>
+            <p class="excited">We're so excited to see you. Sign Up !</p>
+            <label id="email-label"
+              >EMAIL OR PHONE NUMBER <span style="color: red">*</span>
+              <span id="invalid-user-email"
+                ><i>- Login or password is invalid.</i></span
+              >
+            </label>
+            <div class="input-field-div">
+              <input
+                class="input-email"
+                type="email"
+                name="email"
+                id="email"
+                size="50"
+                placeholder="Email ID or phone number"
+              />
+            </div>
+            <label id="pwd-label"
+              >PASSWORD <span style="color: red">*</span>
+              <span id="invalid-user-pwd">
+                <i>- Login or password is invalid.</i></span
+              >
+            </label>
+            <div class="input-field-div">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                size="50"
+                placeholder="Password"
+              />
+            </div>
+            <div class="btn-login" onclick="export2txt()">
+              <div>Register</div>
+            </div>
+            <div>
+                <p class="need-account">
+                  Already have an account ?
+                  <span
+                    style="color: #00a8fc; font-size: 14px"
+                    class="hide-hyperlink"
+                    onclick="returnLogin();"
+                    >Sign In</span
+                  >
+                </p>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div id="snackbar">Please enter your email ID and password.</div>
+    </div>
+  </body>
+</html>
