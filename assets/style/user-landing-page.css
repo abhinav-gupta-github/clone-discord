@@ -326,7 +326,7 @@ i.fa-times {
   display: inline-block;
   border-bottom: 1px dotted transparent;
 }
-.toolTipTopClass{
+.toolTipTopClass {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted transparent;
@@ -347,7 +347,7 @@ i.fa-times {
   font-weight: 600;
   font-size: 15px;
 }
-.toolTipTopClass .tooltiptextTop{
+.toolTipTopClass .tooltiptextTop {
   visibility: hidden;
   width: 120px;
   background-color: black;
@@ -362,7 +362,7 @@ i.fa-times {
   margin-left: -60px;
   font-size: 14px;
 }
-.toolTipTopClass .tooltiptextTopRight{
+.toolTipTopClass .tooltiptextTopRight {
   visibility: hidden;
   width: 50px;
   background-color: black;
@@ -388,7 +388,7 @@ i.fa-times {
   border-style: solid;
   border-color: transparent black transparent transparent;
 }
-.toolTipTopClass .tooltiptextTop::after{
+.toolTipTopClass .tooltiptextTop::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -398,7 +398,7 @@ i.fa-times {
   border-style: solid;
   border-color: transparent transparent black transparent;
 }
-.toolTipTopClass .tooltiptextTopRight::after{
+.toolTipTopClass .tooltiptextTopRight::after {
   content: "";
   position: absolute;
   bottom: 100%;
@@ -412,9 +412,13 @@ i.fa-times {
 .left-menu-padding:hover .tooltiptext {
   visibility: visible;
 }
-.toolTipTopClass:hover .tooltiptextTop{
+.toolTipTopClass:hover .tooltiptextTop {
   visibility: visible;
 }
-.toolTipTopClass:hover .tooltiptextTopRight{
+.toolTipTopClass:hover .tooltiptextTopRight {
   visibility: visible;
+}
+.logout-btn {
+  background-color: #c70c0c;
+  border-radius: 50%;
 }

@@ -154,3 +154,10 @@ function hideAllChannels() {
     document.getElementById("voice-channel-list-main").style.display = "flex";
   }
 }
+function logout(){
+  window.location.href ="../..";
+  preventBack();
+}
+function preventBack() { window.history.forward(); }  
+    setTimeout("preventBack()", 0);  
+    window.onunload = function () { null };
