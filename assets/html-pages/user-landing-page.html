@@ -119,11 +119,15 @@
                 <div class="left-channel-list">
                   Cohort 9 | Vidhya Skills Schoolllllllll
                 </div>
-                <span class="dropdown-icon">
+                <span
+                  class="dropdown-icon"
+                  id="dropdown-icon"
+                  onclick="hideAllChannels()"
+                >
                   <span class="material-symbols-outlined"> expand_more </span>
                 </span>
               </div>
-              <div class="text-channel-heading">
+              <div class="text-channel-heading" id="text-channel-heading">
                 <div
                   class="arrow-icon-channel"
                   style="display: flex; align-items: center"
@@ -150,7 +154,7 @@
               <div id="text-channel-list-main">
                 <ul id="text-channel-list"></ul>
               </div>
-              <div class="voice-channel-heading">
+              <div class="voice-channel-heading" id="voice-channel-heading">
                 <div
                   class="arrow-icon-channel"
                   style="display: flex; align-items: center"

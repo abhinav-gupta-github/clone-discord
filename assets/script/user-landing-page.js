@@ -123,21 +123,34 @@ searchWrapper.classList.add("active");
 
 let countClickTxtChan = 0;
 let countClickVoiceChan = 0;
+let countClickHEaderChan = 0;
 function hideTextChannel() {
-  countClickTxtChan+=1;
+  countClickTxtChan += 1;
   if (countClickTxtChan % 2 != 0) {
     document.getElementById("text-channel-list-main").style.display = "none";
   } else {
     document.getElementById("text-channel-list-main").style.display = "block";
   }
 }
-function hideVoiceChannel(){
-  countClickVoiceChan+=1;
-  if(countClickVoiceChan%2 != 0){
+function hideVoiceChannel() {
+  countClickVoiceChan += 1;
+  if (countClickVoiceChan % 2 != 0) {
     document.getElementById("voice-channel-list-main").style.display = "none";
-  }
-  else{    
-  document.getElementById("voice-channel-list-main").style.display = "block";
+  } else {
+    document.getElementById("voice-channel-list-main").style.display = "block";
   }
 }
-
+function hideAllChannels() {
+  countClickHEaderChan += 1;
+  if (countClickHEaderChan % 2 != 0) {
+    document.getElementById("text-channel-heading").style.display = "none";
+    document.getElementById("voice-channel-heading").style.display = "none";
+    document.getElementById("text-channel-list-main").style.display = "none";
+    document.getElementById("voice-channel-list-main").style.display = "none";
+  } else {
+    document.getElementById("text-channel-heading").style.display = "flex";
+    document.getElementById("voice-channel-heading").style.display = "flex";
+    document.getElementById("text-channel-list-main").style.display = "flex";
+    document.getElementById("voice-channel-list-main").style.display = "flex";
+  }
+}
