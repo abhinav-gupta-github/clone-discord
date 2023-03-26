@@ -168,8 +168,22 @@ const friendListJSON = [
     category: "Today at 10:12 AM",
   },
 ];
-let onlineFriendsJSON = friendListJSON.filter((a) => a.status === 1);
-let offlineFriendsJSON = friendListJSON.filter((b) => b.status === 0);
+let onlineFriendsJSON = (friendListJSON.filter((a) => a.status === 1));
+onlineFriendsJSON.sort(function(a,b){
+  if(a.name.toLowerCase() < b.name.toLowerCase()
+  )  return -1;
+  if(a.name.toLowerCase() > b.name.toLowerCase()
+  )  return 1;;
+  return 0;
+} );
+let offlineFriendsJSON = (friendListJSON.filter((b) => b.status === 0));
+offlineFriendsJSON.sort(function(a,b){
+  if(a.name.toLowerCase() < b.name.toLowerCase()
+  )  return -1;
+  if(a.name.toLowerCase() > b.name.toLowerCase()
+  )  return 1;;
+  return 0;
+});
 
 const onlineCount = onlineFriendsJSON.length;
 const offlineCount = offlineFriendsJSON.length;
