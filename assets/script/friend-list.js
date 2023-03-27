@@ -168,20 +168,16 @@ const friendListJSON = [
     category: "Today at 10:12 AM",
   },
 ];
-let onlineFriendsJSON = (friendListJSON.filter((a) => a.status === 1));
-onlineFriendsJSON.sort(function(a,b){
-  if(a.name.toLowerCase() < b.name.toLowerCase()
-  )  return -1;
-  if(a.name.toLowerCase() > b.name.toLowerCase()
-  )  return 1;;
+let onlineFriendsJSON = friendListJSON.filter((a) => a.status === 1);
+onlineFriendsJSON.sort(function (a, b) {
+  if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+  if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
   return 0;
-} );
-let offlineFriendsJSON = (friendListJSON.filter((b) => b.status === 0));
-offlineFriendsJSON.sort(function(a,b){
-  if(a.name.toLowerCase() < b.name.toLowerCase()
-  )  return -1;
-  if(a.name.toLowerCase() > b.name.toLowerCase()
-  )  return 1;;
+});
+let offlineFriendsJSON = friendListJSON.filter((b) => b.status === 0);
+offlineFriendsJSON.sort(function (a, b) {
+  if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+  if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
   return 0;
 });
 
@@ -243,7 +239,7 @@ for (let i = 0; i < offlineFriendsJSON.length; i++) {
 function onPageLoad() {
   //Render text message chat container with image and date
   $("#emoji-opener").emojioneArea({
-    pickerPosition: "top"
+    pickerPosition: "top",
   });
   const textMsgContainer = document.getElementById("chat-center-render");
 
@@ -309,7 +305,30 @@ function insertNewChat() {
     return 0;
   } else {
     let getDateTime = new Date();
-
+    let sethour = ""; let setMin = "";
+    if (
+      getDateTime % 12 === 0 &&
+      getDateTime.toLocaleString("en-US", { hour: "numeric", hour12: true })
+        .substring(2, 5) == "PM"
+    ) {
+      sethour = 12;
+    } else if (
+      getDateTime % 12 === 0 &&
+      getDateTime.toLocaleString("en-US", { hour: "numeric", hour12: true })
+        .substring(2, 5) == "AM"
+    ) {
+      sethour = 0;
+    } else {
+      sethour = getDateTime.getHours();
+    }
+    // if(getDateTime.getMinutes().toExponential.length==1)
+    // {
+    //   setMin = "0"+getDateTime.getMinutes();
+    // }
+    // else{
+    //   setMin = "";
+    //   setMin = getDateTime.getMinutes();
+    // }
     var objJSON = friendListJSON;
     obj = {
       name: "Abhinav Gupta",
@@ -317,11 +336,11 @@ function insertNewChat() {
       imageSrc: "../images/7cartoon.png",
       description: newChattingText,
       category:
-        "Today at " +
-        getDateTime.getHours()%12 +
-        ":" +
-        getDateTime.getMinutes() +
-        getDateTime
+        "Today at " 
+        +sethour
+        +":"
+        +getDateTime.getMinutes() 
+        +getDateTime
           .toLocaleString("en-US", { hour: "numeric", hour12: true })
           .substring(2, 5),
     };
