@@ -154,10 +154,38 @@ function hideAllChannels() {
     document.getElementById("voice-channel-list-main").style.display = "flex";
   }
 }
-function logout(){
-  window.location.href ="../..";
+function logout() {
+  window.location.href = "../..";
   preventBack();
 }
-function preventBack() { window.history.forward(); }  
-    setTimeout("preventBack()", 0);  
-    window.onunload = function () { null };
+function preventBack() {
+  window.history.forward();
+}
+setTimeout("preventBack()", 0);
+window.onunload = function () {
+  null;
+};
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   var but = document.getElementById("camBtn");
+//   var video = document.getElementById("vid");
+//   document.getElementById("vid").style.display = "block";
+//   var mediaDevices = navigator.mediaDevices;
+//   vid.muted = true;
+//   but.addEventListener("click", () => {
+//     // Accessing the user camera and video.
+//     mediaDevices
+//       .getUserMedia({
+//         video: true,
+//         audio: true,
+//       })
+//       .then((stream) => {
+//         // Changing the source of video to current stream.
+//         video.srcObject = stream;
+//         video.addEventListener("loadedmetadata", () => {
+//           video.play();
+//         });
+//       })
+//       .catch(alert);
+//   });
+// });
